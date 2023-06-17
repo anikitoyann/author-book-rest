@@ -1,9 +1,6 @@
 package com.example.authorbookrest.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,4 +19,6 @@ public class Author {
     private String name;
     private String surname;
     private String email;
+    @ManyToOne
+    private User user;
 }

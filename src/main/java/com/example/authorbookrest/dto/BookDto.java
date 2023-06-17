@@ -1,5 +1,6 @@
-package com.example.authorbookrest.entity;
-import jakarta.persistence.*;
+package com.example.authorbookrest.dto;
+
+import com.example.authorbookrest.entity.Language;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,16 +10,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Entity
-public class Book {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class BookDto {
+
     private int id;
     private String title;
     private String description;
-    @Enumerated(value = EnumType.STRING)
     private Language language;
-    @ManyToOne
-    private Author author;
-
+    private AuthorDto authorDto;
 }
