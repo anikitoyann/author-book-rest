@@ -5,11 +5,14 @@ import com.example.authorbookrest.entity.Book;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring",uses = AuthorMapper.class)
 public interface BookMapper {
     @Mapping(target = "author.id",source = "authorId")
     Book map(CreateBookRequestDto dto);
     @Mapping(target = "authorDto",source ="author" )
     BookDto mapToDto(com.example.authorbookrest.entity.Book entity);
+    List<BookDto>mapToListDtos(List<Book>books);
 
 }

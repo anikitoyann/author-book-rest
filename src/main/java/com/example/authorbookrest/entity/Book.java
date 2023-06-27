@@ -20,5 +20,6 @@ public class Book {
     private Language language;
     @ManyToOne
     private Author author;
+    private double priceAmd;
 
 }

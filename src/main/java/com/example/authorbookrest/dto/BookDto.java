@@ -16,5 +16,8 @@ public class BookDto {
     private String title;
     private String description;
     private Language language;
+    private double priceAmd;
+    private double priceUsd;
+    private double priceRub;
     private AuthorDto authorDto;
 }

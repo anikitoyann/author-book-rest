@@ -43,6 +43,28 @@
         </sql>
     </changeSet>
 
-
+<changeSet id="addPriceToBook" author="kgasparyan">
+    <addColumn tableName="book">
+        <column name="price_amd" type="double">
+            <constraints nullable="true"/>
+        </column>
+    </addColumn>
+</changeSet>
+    <changeSet id="createCurrencyTable" author="kgasparyan">
+        <createTable tableName="currency">
+            <column name="id" type="int(11)" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="rub" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="usd" type="double">
+                <constraints nullable="false"/>
+            </column>
+<column name="last_updated_date" type="timestamp">
+    <constraints nullable="false"/>
+</column>
+        </createTable>
+    </changeSet>
 
 </databaseChangeLog>
