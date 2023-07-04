@@ -21,5 +21,6 @@ public class Book {
     @ManyToOne
     private Author author;
     private double priceAmd;
+    private String picName;
 
 }

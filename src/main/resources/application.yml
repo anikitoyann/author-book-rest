@@ -20,3 +20,8 @@ springdoc:
 countries:
   api:
     key: 273|HlHmeugKDPgtMprcd5WVP5BNAOCQFHKLMQNhYplP
+upload:
+  image:
+    path: C:\\Users\\User\\IdeaProjects\\list.am\\healthcare_managment\\author-book-rest\\images\\
+site:
+    url: http:\\localhost:8080\\books\\getImage?picName=
